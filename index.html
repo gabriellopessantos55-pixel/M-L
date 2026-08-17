@@ -91,8 +91,8 @@
   .logo{
     display:flex; align-items:center; gap:8px;
   }
-  .logo img{ height:64px; width:auto; }
-  footer .logo img{ height:56px; border-radius:6px; }
+  .logo img{ height:56px; width:auto; }
+  footer .logo img{ height:52px; border-radius:6px; }
   .nav-links{ display:flex; gap:36px; }
   .nav-links a{
     font-size:14px; font-weight:500; color:rgba(255,255,255,0.88);
@@ -281,6 +281,27 @@
     margin-top:18px; font-size:12.5px; color:var(--silver);
   }
 
+  /* ---------- GALLERY ---------- */
+  .gallery-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:20px;
+  }
+  .gallery-slot{
+    aspect-ratio:3/4;
+    border:1.5px dashed var(--silver);
+    border-radius:6px;
+    background:var(--sky);
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px;
+    color:var(--glass);
+    overflow:hidden;
+    transition:border-color .2s ease, background .2s ease, transform .25s ease, box-shadow .25s ease;
+  }
+  .gallery-slot:hover{ border-color:var(--accent-dim); background:#DFF3F1; }
+  .gallery-slot svg{ width:30px; height:30px; stroke:var(--glass); }
+  .gallery-slot span{ font-family:var(--font-mono); font-size:11.5px; letter-spacing:0.03em; }
+  .gallery-slot.has-photo{ border-style:solid; border-color:var(--line); padding:0; }
+  .gallery-slot.has-photo:hover{ transform:translateY(-4px); box-shadow:0 16px 30px -14px rgba(11,31,42,0.35); border-color:var(--line); }
+  .gallery-slot.has-photo img{ width:100%; height:100%; object-fit:cover; }
+
   /* ---------- CONTACT ---------- */
   #contato{ background:var(--sky); }
   #contato .wrap{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:64px; }
@@ -354,6 +375,7 @@
     .hero-visual{ aspect-ratio:4/3; order:-1; }
     .services-grid{ grid-template-columns:repeat(2,1fr); }
     .process-list{ grid-template-columns:repeat(2,1fr); }
+    .gallery-grid{ grid-template-columns:repeat(2,1fr); }
     #resultados .wrap{ grid-template-columns:1fr; gap:48px; }
     #contato .wrap{ grid-template-columns:1fr; gap:40px; }
     form.quote{ grid-template-columns:1fr; }
@@ -383,6 +405,7 @@
       <a href="#servicos">Serviços</a>
       <a href="#processo">Processo</a>
       <a href="#resultados">Resultados</a>
+      <a href="#trabalhos">Trabalhos</a>
       <a href="#contato">Contato</a>
     </div>
     <div class="nav-cta">
@@ -524,6 +547,31 @@
           </div>
         </div>
         <p class="note-placeholder">Depoimentos ilustrativos — troque pelos relatos reais dos seus clientes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="trabalhos">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Nossos trabalhos</div>
+        <h2>Serviços feitos por nós</h2>
+        <p>Vidros e vitrines entregues limpos, sem manchas nem vestígios.</p>
+      </div>
+      <div class="gallery-grid reveal">
+        <div class="gallery-slot has-photo">
+          <img src="assets/trabalho1.jpg" alt="Vidro de sacada limpo, vista da cidade">
+        </div>
+        <div class="gallery-slot has-photo">
+          <img src="assets/trabalho2.jpg" alt="Fachada de loja com vitrines de vidro">
+        </div>
+        <div class="gallery-slot has-photo">
+          <img src="assets/trabalho3.jpg" alt="Vidro de varanda limpo, vista do jardim">
+        </div>
+        <div class="gallery-slot has-photo">
+          <img src="assets/trabalho4.jpg" alt="Limpeza de vidro de cobertura em andamento">
+        </div>
       </div>
     </div>
   </section>
