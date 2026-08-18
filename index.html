@@ -191,7 +191,7 @@
     background:var(--sky);
   }
   .strip .wrap{
-    display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px;
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(150px,1fr)); gap:24px 20px;
     padding-top:28px; padding-bottom:28px;
   }
   .strip-item{ display:flex; flex-direction:column; gap:4px; }
@@ -385,7 +385,7 @@
     .wrap{ padding:0 20px; }
     .services-grid{ grid-template-columns:1fr; }
     .process-list{ grid-template-columns:1fr; }
-    .strip .wrap{ gap:24px; }
+    .strip .wrap{ gap:20px 16px; }
   }
 
   @media (prefers-reduced-motion: reduce){
@@ -447,8 +447,10 @@
   <!-- STRIP -->
   <section class="strip" style="padding:0;">
     <div class="wrap">
-      <div class="strip-item"><span class="num">+1.200</span><span class="label">imóveis atendidos</span></div>
-      <div class="strip-item"><span class="num">4,9/5</span><span class="label">avaliação média dos clientes</span></div>
+      <div class="strip-item"><span class="num">+15 anos</span><span class="label">de experiência</span></div>
+      <div class="strip-item"><span class="num">+3 mil</span><span class="label">residências atendidas</span></div>
+      <div class="strip-item"><span class="num">+15 mil</span><span class="label">clientes satisfeitos</span></div>
+      <div class="strip-item"><span class="num">4,9 ★</span><span class="label">avaliação média dos clientes</span></div>
       <div class="strip-item"><span class="num">48h</span><span class="label">prazo médio de atendimento</span></div>
       <div class="strip-item"><span class="num">100%</span><span class="label">produtos neutros e seguros</span></div>
     </div>
@@ -663,7 +665,7 @@
     </div>
   </div>
   <div class="bottom">
-    <span>© 2026 M&amp;L Limpeza de Vitrines. Todos os direitos reservados.</span>
+    <span>© 2026 M&amp;L Limpeza de Vitrines. Todos os direitos reservados. CNPJ 48.443.422/0001-68</span>
     <span>Horários de atendimento: Segunda a Sexta de 07:00 às 18:00</span>
   </div>
 </footer>
